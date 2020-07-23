@@ -1,0 +1,18 @@
+
+<%- include("partials/header"); -%>
+<h1>Home</h1>
+<p> 
+    Hello there! 
+    Welcome to The Crazy Coder. We hope that you find some useful resources here. Happy Coding!
+</p>
+<%  posts.forEach(function(post){ %>
+
+    <h2><%=post.title%></h2>
+    <p>
+    <%=post.content.substring(0, 100) + " ..."%>
+    <a class="read" href="/posts/<%=post._id%>">Read More</a>
+    </p>
+
+
+    <% }) %>
+<%- include("partials/footer"); -%>
